@@ -1,5 +1,6 @@
 
 import React, { Component } from "react";
+import './class.css';
 class Hellow extends Component {
     state = {
         books : [
@@ -21,12 +22,22 @@ class Hellow extends Component {
         })
     }
     render(){
+        const style = {
+            backgroundColor:'blue',
+            font:'inherit',
+            border:'2px solid maroon',
+            padding:'1opx',
+            cursor:'pointer'
+          
+
+
+        };
         return ( 
             <div>
-        <button  onClick={this.clickHandler}>Click Here</button>
-        <h5>I love to read {this.state.books[0].name} Written By {this.state.books[0].wirtten_by} </h5>
-        <h5>I love to read {this.state.books[1].name} Written By {this.state.books[1].wirtten_by} </h5>
-        <h5>I love to read {this.state.books[2].name} Written By {this.state.books[2].wirtten_by} </h5>
+        <button style={style}  onClick={this.clickHandler}>Click Here</button>
+        <h5 className='test'>I love to read {this.state.books[0].name} Written By {this.state.books[0].wirtten_by} </h5>
+        <h5 className='test'>I love to read {this.state.books[1].name} Written By {this.state.books[1].wirtten_by} </h5>
+        <h5 className='test'>I love to read {this.state.books[2].name} Written By {this.state.books[2].wirtten_by} </h5>
 
         </div>
         )
