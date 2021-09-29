@@ -1,6 +1,16 @@
 import React from "react";
 
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// import Navbar from 'react-bootstrap/Navbar'
+// import Nav from 'react-bootstrap/Nav'
+// import Form from 'react-bootstrap/Form'
+// import FormControl from 'react-bootstrap/FormControl'
+// import Button from 'react-bootstrap/Button'
+// import NavDropdown from 'react-bootstrap/NavDropdown'
+// import Breadcrumb from 'react-bootstrap/Breadcrumb'
+
 
 // import Hi from './components/Functional'
 // import Hellow from "./components/Class";
@@ -89,14 +99,30 @@ import './App.css';
   //   }
   // }
   render(){
-    const movies=['Inception','Endgame','Infinity War','Thor']
-    const names=movies.map((name,id)=>{
-      return <li>{id+1} {name}</li>
-    })
+    // const movies=['Inception','Endgame','Infinity War','Thor']
+    // const names=movies.map((name,id)=>{
+    //   return <li>{id+1} {name}</li>
+    // })
+    // const names=[
+    //   {name:'Kalam Ahmed', age:22, cgpa:3.20},
+    //   {name:'Imran Ahmed', age:24, cgpa:3.10},
+
+    //   {name:'Faysal Fokir', age:22, cgpa:3.30},
+
+      
+    // ]
+    // const items=names.map((item,id)=>{
+    //   return <li>
+    //     Name:{item.name}    Age:{item.age}     CGPA:{item.cgpa} 
+    //     <button class='btn btn-primary'>Update</button> || <button btn btn-danger>Delete</button>
+    //   </li>
+    // })
 
     return (
       <div className="App"> 
         <h1>System Time {new Date().toLocaleTimeString()}</h1>
+        
+        
         {/* <h4>{this.state.text}</h4> */}
         {/* <form onSubmit={this.textSubmit}> */}
 
@@ -147,12 +173,49 @@ import './App.css';
             <button type='submit' class='btn btn-success'>Submit</button>
         </form>
          */}
-         <div>
-           <h1>Movie List</h1>
-           {names}
+         
+           {/* <h1>Movie List</h1>
+           {names} */}
+           {/* <h1>Student List</h1>
+           {items} */}
 
+{/* <Navbar bg="light" expand="lg">
+  <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+  <Navbar.Toggle aria-controls="navbarScroll" />
+  <Navbar.Collapse id="navbarScroll">
+    <Nav
+      className="mr-auto my-2 my-lg-0"
+      style={{ maxHeight: '100px' }}
+      Kalam Ahmed
+    >
+      <Nav.Link href="#action1">About Me </Nav.Link>
+      <Nav.Link href="#action2">Post</Nav.Link>
+      <Nav.Link href="#action2">Project</Nav.Link>
+
+
+      
+      
+    </Nav>
+    <Form className="d-flex">
+      <FormControl
+        type="search"
+        placeholder="Search"
+        className="mr-2"
+        aria-label="Search"
+      />
+      <Button variant="outline-success">Search</Button>
+    </Form>
+  </Navbar.Collapse>
+</Navbar> */}
+{/* <Breadcrumb>
+  <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
+  <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+    Library
+  </Breadcrumb.Item>
+  <Breadcrumb.Item active>Data</Breadcrumb.Item>
+</Breadcrumb> */}
          </div>
-        </div>
+        
     )
   }
 
