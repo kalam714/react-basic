@@ -1,4 +1,6 @@
-import React from "react";
+// import React,{useState} from "react";
+import React,{Component} from "react";
+
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -44,7 +46,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // export default App;
  class App extends React.Component{
-  //  state = {
+   state = {
   //   //  username:'',
   //   //  email:'',
   //   //  adress:'',
@@ -54,8 +56,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
   //   errorEmail:'',
   //   errorPassword:'',
   //   desc:'',
-  //   kdrama:''
-  //  }
+  //   kdrama:'',
+       count:0
+
+    }
   //  textGen = (e)=>{
   //    let value = e.target.value
   //    this.setState({text:value})
@@ -90,6 +94,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
   //     return true
   //   }
   // }
+  setCount=()=>{
+    this.setState({count:this.state.count +1})
+  }
 
   // formSubmit = (e)=>{
   //   e.preventDefault()
@@ -121,6 +128,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
     return (
       <div className="App"> 
         <h1>System Time {new Date().toLocaleTimeString()}</h1>
+        <strong>Coount Number : {this.state.count}</strong><br></br>
+            <button onClick={this.setCount}>Count</button>
         
         
         {/* <h4>{this.state.text}</h4> */}
@@ -220,5 +229,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
   }
 
 
- }
+}
 export default App;
+// export const App = ()=>{
+//  const [count,setCount]=useState(0)
+//   return (
+//     <div>
+//               <h1>System Time {new Date().toLocaleTimeString()}</h1>
+//             <strong>Coount Number : {count}</strong><br></br>
+//             <button onClick={()=>{setCount(count+1)}}>Count</button>
+
+//     </div>
+//   )
+// }

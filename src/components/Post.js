@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-const axios = require('axios');
+import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
 
+const axios = require('axios');
 
 export default class Post extends Component{
     state = {
@@ -34,6 +35,8 @@ export default class Post extends Component{
 
         return(
             <div>
+      <Link  to="/create">Create Post</Link>
+
 <div class="media">
   <div class="media-body text-center">
       {allPosts}
